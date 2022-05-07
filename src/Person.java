@@ -9,7 +9,6 @@ public abstract class Person {
     private static int counter;
     static HashMap peopleMap;
 
-
     public Person(String name, String lastName, int age, Faculty f) {
         this.name = name;
         this.lastName = lastName;
