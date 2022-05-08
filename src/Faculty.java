@@ -10,18 +10,18 @@ public class Faculty {
     }
 
     //looks through arraylist for people with matching id, removes them
-    public void removePerson(int id){
+    public void removePerson(String id){
         for(Person p: people){
-            if(p.getId() == id){
+            if(p.getId().equals(id)){
                 people.remove(p);
                 break;
             }
         }
     }
 
-    public void transferPerson(int id, Faculty transferF){
+    public void transferPerson(String id, Faculty transferF){
         for(Person p: people){
-            if(p.getId() == id){
+            if(p.getId().equals(id)){
                 transferF.addPerson(p);
                 people.remove(p);
                 break;
