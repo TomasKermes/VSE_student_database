@@ -4,9 +4,11 @@ public class Main {
     public static void main(String[] args){
         Database db = new Database();
 
-        Person p = new Person("Pepík", "Vomáčka", "25012001", db);
+        Student p = new Student("Pepík", "Vomáčka", "25012001", db, 'm') {
+        };
         db.addPerson(p);
-        Person p1 = new Person("Petr", "Vomel", "12031999",db);
+        Student p1 = new Student("Petr", "Vomel", "12031999", db, 'b') {
+        };
         db.addPerson(p1);
 
         System.out.println(p.getId());
