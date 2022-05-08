@@ -1,6 +1,6 @@
 import java.util.HashMap;
 
-public abstract class Person {
+public class Person {
     private String name;
     private String lastName;
     private int age;
@@ -10,13 +10,12 @@ public abstract class Person {
     static HashMap peopleMap;
 
 
-    public Person(String name, String lastName, int age, Faculty f) {
+    public Person(String name, String lastName, int age) {
         this.name = name;
         this.lastName = lastName;
         this.age = age;
         this.id = counter;
         counter++;
-        f.addPerson(this);
         peopleMap.put(this.id, this);
     }
 
