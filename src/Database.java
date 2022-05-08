@@ -16,4 +16,20 @@ public class Database {
     public void removePerson(Person p){
         peopleMap.remove(p.getId());
     }
+
+    public int getCountOfIndentsWithSamePrefix(String prefix){
+        int counter = 0;
+
+        String[] keys = peopleMap.keySet().toArray(new String[0]);
+
+        for (String key : keys) {
+            key = key.split("(?<=\\D)(?=\\d)")[0];
+
+            if (key.equals(prefix)) {
+                counter++;
+            }
+        }
+
+        return counter;
+    }
 }

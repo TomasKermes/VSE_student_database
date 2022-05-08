@@ -8,16 +8,22 @@ public abstract class Student extends Person{
 
     private DegreeType degreeType;
 
-    public Student(String name, String lastName, String dateofBirth, int id, char deg) {
-        super(name, lastName, dateofBirth);
+    public Student(String name, String lastName, String dateofBirth, Database db, int id, char deg) {
+        super(name, lastName, dateofBirth, db);
         setDegreeType(deg);
     }
 
     public void setDegreeType(char c){
-        switch (c) {
-            case 'b' -> degreeType = DegreeType.BACHELOR;
-            case 'm' -> degreeType = DegreeType.MASTER;
-            case 'p' -> degreeType = DegreeType.PHD;
+        switch(c){
+            case 'b':
+                degreeType = DegreeType.BACHELOR;
+                break;
+            case 'm':
+                degreeType = DegreeType.MASTER;
+                break;
+            case 'p':
+                degreeType = DegreeType.PHD;
+                break;
         }
     }
 
