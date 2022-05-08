@@ -1,4 +1,9 @@
+package data;
+
+import classes.Person;
+
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 
 public class Database {
@@ -7,6 +12,12 @@ public class Database {
 
     public Database(){
         peopleMap = new HashMap<>();
+    }
+
+    //////////////////////////////////////////////////// Utils
+
+    public void setPeople(HashMap<String,Person> people){
+        peopleMap = people;
     }
 
     public void addPerson(Person p){
@@ -31,5 +42,20 @@ public class Database {
         }
 
         return counter;
+    }
+
+    public Person getPerson(String id){
+        if(peopleMap.containsKey(id)){
+            return peopleMap.get(id);
+        }
+        return null;
+    }
+
+    public int getPeopleCount(){
+        return peopleMap.size();
+    }
+
+    public HashSet<Person> getAllPeople(){
+        return new HashSet<>(peopleMap.values());
     }
 }
