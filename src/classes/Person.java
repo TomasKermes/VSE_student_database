@@ -10,6 +10,16 @@ public class Person {
     private String lastName;
     private String dateofBirth; //Format should be DDMMYYYY
 
+    public Person(String id, String name, String lastName, String dateofBirth){
+        this.id = id;
+        if (!dateofBirth.matches("(\\d){8}")){
+            throw new IllegalArgumentException("bad dateofBirth format");
+        }
+        this.name = name;
+        this.lastName = lastName;
+        this.dateofBirth = dateofBirth;
+    }
+
     public Person(String name, String lastName, String dateofBirth, Database database) {
         if (!dateofBirth.matches("(\\d){8}")){
             throw new IllegalArgumentException("bad dateofBirth format");
@@ -64,11 +74,11 @@ public class Person {
         this.lastName = lastName;
     }
 
-    public String getDateofBirth() {
+    public String getDateOfBirth() {
         return dateofBirth;
     }
 
-    public void setDateofBirth(String dateofBirth) {
+    public void setDateOfBirth(String dateofBirth) {
         this.dateofBirth = dateofBirth;
     }
 

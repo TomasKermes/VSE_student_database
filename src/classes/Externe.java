@@ -7,9 +7,16 @@ public class Externe extends Person{
     private String title;
     private int payment;
 
-    public Externe(String name, String lastName, String dateofBirth, Database db, String title){
-        super(name, lastName, dateofBirth, db);
+    public Externe(String id, String name, String lastName, String dateOfBirth, String title,int payment){
+        super(id, name, lastName, dateOfBirth);
         this.title = title;
+        this.payment = payment;
+    }
+
+    public Externe(String name, String lastName, String dateOfBirth, Database db, String title, int payment){
+        super(name, lastName, dateOfBirth, db);
+        this.title = title;
+        this.payment = payment;
     }
 
     //////////////////////////////////////////////////// Getters & Setters

@@ -12,8 +12,13 @@ public abstract class Student extends Person{
 
     private DegreeType degreeType;
 
-    public Student(String name, String lastName, String dateofBirth, Database db, int id, char deg) {
-        super(name, lastName, dateofBirth, db);
+    public Student(String id, String name, String lastName, String dateOfBirth, char deg) {
+        super(id, name, lastName, dateOfBirth);
+        setDegreeType(deg);
+    }
+
+    public Student(String name, String lastName, String dateOfBirth, Database db, char deg) {
+        super(name, lastName, dateOfBirth, db);
         setDegreeType(deg);
     }
 
@@ -39,6 +44,6 @@ public abstract class Student extends Person{
 
     @Override
     public String[] getAllProperties(){
-        return new String[] {super.getId(),super.getName(),super.getLastName(),super.getDateofBirth(),getDegreeType().toString()};
+        return new String[] {super.getId(),super.getName(),super.getLastName(),super.getDateOfBirth(),getDegreeType().toString()};
     }
 }
