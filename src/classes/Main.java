@@ -20,13 +20,20 @@ public class Main {
         Database db = new Database();
         db.setPeople(PersonService.readData(db));
 
-       /* Teacher t = new Teacher("Karel", "Vašut", "30061970",db, "ing", false);
+        Faculty f1 = new Faculty();
+        f1.addPerson(db.getPerson("kovj00"));
+        Faculty f2 = new Faculty();
+        Faculty f3 = new Faculty();
+
+
+        Teacher t = new Teacher("Lukáš", "Buňát", "30061990",db, "ing", false);
         db.addPerson(t);
 
-        Student s = new Student("Jan","Kovář", "02042000",db,'b');
+        Student s = new Student("Tomáš","Janek", "03052001",db,'b');
         db.addPerson(s);
 
-        PersonService.writeData(db);*/
+        PersonService.writeData(db);
+
 
         System.out.println(db.getPerson("kovj00").getId());
 
