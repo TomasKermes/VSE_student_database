@@ -1,25 +1,22 @@
 import java.util.HashMap;
 
-public abstract class Person {
+public class Person {
+    private String id;
     private String name;
     private String lastName;
-    private int age;
+    private String dateofBirth; //Format should be DDMMYYYY
 
-    private final int id;
-    private static int counter;
-    static HashMap peopleMap;
-
-    public Person(String name, String lastName, int age, Faculty f) {
+    public Person(String name, String lastName, String dateofBirth) {
+        if (!dateofBirth.matches("(\\d){8}")){
+            throw new IllegalArgumentException("bad dateofBirth format");
+        };
         this.name = name;
         this.lastName = lastName;
-        this.age = age;
-        this.id = counter;
-        counter++;
-        f.addPerson(this);
-        peopleMap.put(this.id, this);
+        this.dateofBirth = dateofBirth;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
+
 }
