@@ -71,4 +71,11 @@ public class Person {
     public void setDateofBirth(String dateofBirth) {
         this.dateofBirth = dateofBirth;
     }
+
+    public String[] getAllProperties(){
+        return new String[] {id,name,lastName,dateofBirth};
+    }
+
+    //////////////////////////////////////////////////// Utils
+
 }

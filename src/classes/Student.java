@@ -5,7 +5,7 @@ import data.Database;
 public abstract class Student extends Person{
 
     enum DegreeType{
-        BACHELOR,
+        BACHELOR ,
         MASTER,
         PHD
     }
@@ -16,6 +16,8 @@ public abstract class Student extends Person{
         super(name, lastName, dateofBirth, db);
         setDegreeType(deg);
     }
+
+    //////////////////////////////////////////////////// Getters & Setters
 
     public void setDegreeType(char c){
         switch(c){
@@ -31,5 +33,12 @@ public abstract class Student extends Person{
         }
     }
 
+    public DegreeType getDegreeType(){
+        return this.degreeType;
+    }
 
+    @Override
+    public String[] getAllProperties(){
+        return new String[] {super.getId(),super.getName(),super.getLastName(),super.getDateofBirth(),getDegreeType().toString()};
+    }
 }

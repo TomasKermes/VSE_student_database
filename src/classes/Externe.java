@@ -11,4 +11,28 @@ public class Externe extends Person{
         super(name, lastName, dateofBirth, db);
         this.title = title;
     }
+
+    //////////////////////////////////////////////////// Getters & Setters
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public int getPayment() {
+        return payment;
+    }
+
+    public void setPayment(int payment) {
+        this.payment = payment;
+    }
+
+    @Override
+    public String[] getAllProperties(){
+        return new String[] {super.getId(),super.getName(),super.getLastName(),super.getDateofBirth(),title, String.valueOf(payment)};
+    }
+
 }
