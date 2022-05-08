@@ -4,7 +4,7 @@ import data.Database;
 
 import java.util.Locale;
 
-public class Person {
+public abstract class Person {
     private String id;
     private String name;
     private String lastName;
@@ -85,7 +85,5 @@ public class Person {
     public String[] getAllProperties(){
         return new String[] {id,name,lastName,dateofBirth};
     }
-
-    //////////////////////////////////////////////////// Utils
 
 }

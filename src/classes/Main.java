@@ -18,23 +18,17 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
         Database db = new Database();
+        db.setPeople(PersonService.readData(db));
 
-        Person p = new Person("Pepík", "Vomáčka", "25012001", db);
-        db.addPerson(p);
-        Person p1 = new Person("Petr", "Vomel", "12031999",db);
-        db.addPerson(p1);
-        Teacher t = new Teacher("Karel", "Vašut", "30061970",db, "ing", false);
+       /* Teacher t = new Teacher("Karel", "Vašut", "30061970",db, "ing", false);
         db.addPerson(t);
 
+        Student s = new Student("Jan","Kovář", "02042000",db,'b');
+        db.addPerson(s);
 
-        PersonService.writeData(db);
+        PersonService.writeData(db);*/
 
-
-
-        System.out.println(db.convertWithIteration());
-        System.out.println(db.getPerson("vašk00"));
-
-
+        System.out.println(db.getPerson("kovj00").getId());
 
     }
 }

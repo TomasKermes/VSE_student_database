@@ -2,18 +2,18 @@ package classes;
 
 import data.Database;
 
-public class Externe extends Person{
+public class Externist extends Person{
 
     private String title;
-    private int payment;
+    private double payment;
 
-    public Externe(String id, String name, String lastName, String dateOfBirth, String title,int payment){
+    public Externist(String id, String name, String lastName, String dateOfBirth, String title, double payment){
         super(id, name, lastName, dateOfBirth);
         this.title = title;
         this.payment = payment;
     }
 
-    public Externe(String name, String lastName, String dateOfBirth, Database db, String title, int payment){
+    public Externist(String name, String lastName, String dateOfBirth, Database db, String title, double payment){
         super(name, lastName, dateOfBirth, db);
         this.title = title;
         this.payment = payment;
@@ -29,7 +29,7 @@ public class Externe extends Person{
         this.title = title;
     }
 
-    public int getPayment() {
+    public double getPayment() {
         return payment;
     }
 

@@ -2,7 +2,7 @@ package classes;
 
 import data.Database;
 
-public abstract class Student extends Person{
+public class Student extends Person{
 
     enum DegreeType{
         BACHELOR ,

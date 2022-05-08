@@ -16,6 +16,10 @@ public class Database {
 
     //////////////////////////////////////////////////// Utils
 
+    public void setPeople(HashMap<String,Person> people){
+        peopleMap = people;
+    }
+
     public void addPerson(Person p){
         peopleMap.put(p.getId(),p);
     }
@@ -54,18 +58,4 @@ public class Database {
     public HashSet<Person> getAllPeople(){
         return new HashSet<>(peopleMap.values());
     }
-
-    /**
-     * code from https://www.baeldung.com/java-map-to-string-conversion
-     * */
-    public String convertWithIteration() {
-        StringBuilder mapAsString = new StringBuilder("{");
-        for (String key : peopleMap.keySet()) {
-            mapAsString.append(key).append("=").append(peopleMap.get(key)).append(", ");
-        }
-        mapAsString.delete(mapAsString.length()-2, mapAsString.length()).append("}");
-        return mapAsString.toString();
-    }
-
-
 }
