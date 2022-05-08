@@ -1,3 +1,7 @@
+package data;
+
+import classes.Person;
+
 import java.util.HashMap;
 import java.util.Map;
 

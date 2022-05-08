@@ -1,3 +1,7 @@
+package classes;
+
+import data.Database;
+
 public abstract class Student extends Person{
 
     enum DegreeType{

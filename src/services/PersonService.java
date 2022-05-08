@@ -1,6 +1,7 @@
 package services;
 
 import com.opencsv.CSVWriter;
+import data.Database;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -20,11 +21,13 @@ public class PersonService {
 
     }
 
-    public void writeDataLineByLine() throws IOException{
+    public void writeData(Database db) throws IOException{
         try{
-            FileWriter outputFile = new FileWriter(this.file);
+            FileWriter outputFile = new FileWriter(this.file,false);
 
             CSVWriter writer = new CSVWriter(outputFile);
+
+
 
 
 
@@ -33,19 +36,4 @@ public class PersonService {
         }
     }
 
-    public void getAllStudents(){
-
-    }
-
-    public void getAllTeachers(){
-
-    }
-
-    public void getAllMasters(){
-
-    }
-
-    public void getAllDoctors(){
-
-    }
 }

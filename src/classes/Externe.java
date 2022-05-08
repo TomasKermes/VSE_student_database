@@ -1,3 +1,7 @@
+package classes;
+
+import data.Database;
+
 public class Externe extends Person{
 
     private String title;

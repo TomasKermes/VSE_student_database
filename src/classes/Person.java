@@ -1,4 +1,7 @@
-import java.util.HashMap;
+package classes;
+
+import data.Database;
+
 import java.util.Locale;
 
 public class Person {
