@@ -6,7 +6,6 @@ public class Person {
     private String lastName;
     private String dateofBirth; //Format should be DDMMYYYY
 
-
     public Person(String name, String lastName, String dateofBirth) {
         if (!dateofBirth.matches("(\\d){8}")){
             throw new IllegalArgumentException("bad dateofBirth format");
@@ -14,8 +13,6 @@ public class Person {
         this.name = name;
         this.lastName = lastName;
         this.dateofBirth = dateofBirth;
-
-
     }
 
     public String getId() {
