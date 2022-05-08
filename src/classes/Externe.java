@@ -32,7 +32,7 @@ public class Externe extends Person{
 
     @Override
     public String[] getAllProperties(){
-        return new String[] {super.getId(),super.getName(),super.getLastName(),super.getDateofBirth(),title, String.valueOf(payment)};
+        return new String[] {super.getId(),super.getName(),super.getLastName(),super.getDateOfBirth(),title, String.valueOf(payment)};
     }
 
 }
