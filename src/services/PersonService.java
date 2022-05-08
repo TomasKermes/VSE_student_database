@@ -1,28 +1,37 @@
 package services;
 
+import com.opencsv.CSVWriter;
+
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 
 public class PersonService {
     public File file;
 
     public PersonService(String filepath) throws IOException {
-
         File newFile = new File(filepath);
         if(newFile.exists()){
-            filepath = filepath;
+            this.file = newFile;
         }
         else {
-            throw new IOException("");
+            throw new IOException("File doesn't exist");
         }
 
     }
 
-    public static void writeDataLineByLine(){
+    public void writeDataLineByLine() throws IOException{
+        try{
+            FileWriter outputFile = new FileWriter(this.file);
 
+            CSVWriter writer = new CSVWriter(outputFile);
+
+        }catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
-    public void getAllSudents(){
+    public void getAllStudents(){
 
     }
 
@@ -34,5 +43,7 @@ public class PersonService {
 
     }
 
-    public void getAll
+    public void getAllDoctors(){
+
+    }
 }
