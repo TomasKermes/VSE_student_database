@@ -2,8 +2,8 @@ public abstract class Student extends Person{
 
     private DegreeType degreeType;
 
-    public Student(String name, String lastName, int age, int id, char deg) {
-        super(name, lastName, age);
+    public Student(String name, String lastName, String dateofBirth, int id, char deg) {
+        super(name, lastName, dateofBirth);
         setDegreeType(deg);
     }
 
